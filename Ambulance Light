@@ -1,0 +1,24 @@
+void setup() {
+  pinMode(11, OUTPUT);  // Red LED on Pin 11
+  pinMode(12, OUTPUT);  // Blue LED on Pin 12
+}
+
+void loop() {
+  // Flash red LED (pin 11)
+  digitalWrite(11, HIGH);
+  digitalWrite(12, LOW);
+  delay(200);  // 0.2 seconds on
+  
+  // Both off briefly
+  digitalWrite(11, LOW);
+  delay(50);   // 0.05 seconds off
+  
+  // Flash blue LED (pin 12)
+  digitalWrite(12, HIGH);
+  digitalWrite(11, LOW);
+  delay(200);  // 0.2 seconds on
+  
+  // Both off briefly
+  digitalWrite(12, LOW);
+  delay(50);   // 0.05 seconds off
+}
